@@ -158,10 +158,10 @@ if page == "🚀 PCAP Traffic Analyzer":
         st.markdown("**Or load a bundled sample PCAP:**")
         sample_options = {
             "None": None,
-            "🌐 Browsing (HTTPS/TLS)": "data/sample_pcaps/browsing_https.pcap",
-            "📞 VoIP Call (UDP/RTP)": "data/sample_pcaps/voip_call.pcap",
-            "🎬 Video Streaming (Buffering)": "data/sample_pcaps/streaming_video.pcap",
-            "📁 File Transfer (Large Chunks)": "data/sample_pcaps/file_transfer.pcap",
+            "🌐 Browsing (HTTPS/TLS)": str(Path(__file__).resolve().parent / "data/sample_pcaps/browsing_https.pcap"),
+"📞 VoIP Call (UDP/RTP)": str(Path(__file__).resolve().parent / "data/sample_pcaps/voip_call.pcap"),
+"🎬 Video Streaming (Buffering)": str(Path(__file__).resolve().parent / "data/sample_pcaps/streaming_video.pcap"),
+"📁 File Transfer (Large Chunks)": str(Path(__file__).resolve().parent / "data/sample_pcaps/file_transfer.pcap"),
         }
         selected_sample = st.selectbox("Select Sample Capture:", list(sample_options.keys()))
 

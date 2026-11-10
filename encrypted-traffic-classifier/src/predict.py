@@ -32,11 +32,10 @@ import numpy as np
 import pandas as pd
 
 # Default project paths relative to repository root
-DEFAULT_MODEL_PATH = Path("models/best_model.pkl")
-DEFAULT_SCALER_PATH = Path("models/scaler.pkl")
-DEFAULT_FEATURE_COLS_PATH = Path("data/processed/feature_columns.json")
-DEFAULT_LABEL_MAP_PATH = Path("data/processed/label_map.json")
-
+DEFAULT_MODEL_PATH = REPO_ROOT / "models" / "best_model.pkl"
+DEFAULT_SCALER_PATH = REPO_ROOT / "models" / "scaler.pkl"
+DEFAULT_FEATURE_COLS_PATH = REPO_ROOT / "data" / "processed" / "feature_columns.json"
+DEFAULT_LABEL_MAP_PATH = REPO_ROOT / "data" / "processed" / "label_map.json"
 
 def load_artifacts(
     model_path: Path | str = DEFAULT_MODEL_PATH,
